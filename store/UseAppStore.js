@@ -14,7 +14,7 @@ export const UseAppStore = create((set, get) => (
         toggleTheme: () => set((state) => ({ isDarkTheme: !state.isDarkTheme })),
         toggleSound: () => set((state) => ({ soundEnabled: !state.soundEnabled })),
         setIsOffline: () => set((state) => ({ isOffline: !state.isOffline })),
-        setFontSize: () => (fontSizeKey) => set({ fontSizeKey }),
+        setFontSize: (fontSizeKey) => set({ fontSizeKey }),
 
 
         // data caching state

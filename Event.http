@@ -1,0 +1,43 @@
+@baseurl  = https://elevate-horizon-connect-api.onrender.com
+
+### health check
+GET {{baseurl}}/api/health
+
+### get all events
+GET {{baseurl}}/api/events 
+
+### get single event
+GET {{baseurl}}/api/events/2 
+
+
+### get single event today
+GET {{baseurl}}/api/events/today
+
+
+### get single event date
+GET {{baseurl}}/api/events/today?date=2026-11-12
+
+
+### get single event by category
+GET {{baseurl}}/api/events?category=Music
+
+
+### get single event by spotsRemaining
+GET {{baseurl}}/api/events?spotsRemaining=50
+
+
+### Registration for an event
+POST {{baseurl}}/api/registrations
+Content-Type: application/json
+x-api-key: student_secret_render_888
+
+{
+    "eventId": 1,
+    "fullName": "Test Person 2",
+    "email": "test.person2@example.com"
+}
+
+
+### List of registered People
+GET {{baseurl}}/api/registrations/event/1
+
